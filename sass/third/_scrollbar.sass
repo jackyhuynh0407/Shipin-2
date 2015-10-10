@@ -1,0 +1,53 @@
+$track-color: #000
+$thumb-color: #000
+.scrollable
+  .overview
+    padding-right: 25px
+.disable
+  display: none
+  .overview
+    padding-right: 0 !important
+.scrollable
+  position: relative
+  .viewport
+    height: 100%
+    width: 100%
+    overflow: hidden
+    position: relative
+    top: 0
+    left: 0
+  .overview
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    +transition(all 0.35s ease)
+.scrollbar
+  background: #ddd
+  position: absolute
+  right: 0px
+  top: 0
+  width: 3px
+  z-index: 4
+  border-radius: 1.5px
+  .track
+    background: #ddd
+    height: 100%
+    width: 3px
+    position: relative
+    border-radius: 1.5px
+  .thumb
+    background: #bbb
+    +transition(all 0.35s ease)
+    height: auto
+    width: 3px
+    cursor: pointer
+    overflow: hidden
+    position: absolute
+    border-radius: 1.5px
+    top: 0
+    left: 0px
+    &:active
+      background: #aaa
+      +transition(all 0s ease)
+  

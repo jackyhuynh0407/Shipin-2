@@ -1,0 +1,55 @@
+mixin lipsum(amount, type)
+    //- this array will be loremText (by sentences);
+    - var loremArray = new Array();
+    //- this string is cherry picked (by sentences) to build a random piece of content;
+    - var loremText = "乾道投资基金管理有限公司隶属于乾道投资控股集团有限公司，是乾道投资体系的核心组成部分，是一家以发起设立股权投资基金、基金管、并为发展型企业提供资金和增值等服务的专业性投资基金管理机构。公司的专业投资团队从众多优秀的未上市企业中甄选出具有高增长性及上市可能性的企业，并通过项目的尽职调查共同成长，共享中国资本市场快速发展的盛宴。是一种在经济全球化背景下产生的以创造力为核心的新兴文化创意产业主要包括广播影视资产管理业务、投资银行业务、综合财富管理业务等四大业务版块，致力于打造具有国际竞争力的企业投资集团力争跻身世级投资机构行列。在组合投资业务版块，乾道将侧重于私募股权投资、PRE-IPO投资、夹层基金、实体产业投资、不良资产处置等在投资银行业务版块，乾道将主攻一二级市场并购重组、不动产抵押融资、上市公司定向增发在综合财富管理业务版块，乾道顺应时势强力推出互联网金融平台，包括永利宝PCP平台，打造中国最合规的互联网金融撮合平台，为高净值客户提供专业、稳健的投资理财咨询服务。文化创意产业文化创意产业Cultural and Creative Industries，是一种在经济全球化背景下产生的以创造力为核心的新兴文化创意产业主要包括广播影视";
+    //- what we use to split the string on;
+    - var sentenceSplit = "。";
+    //- the array to collect our random selection of content from loremText;
+    - var lipsumArray = new Array();
+    //- a string of our randomly selected content;
+    - var lipsumText = "";
+    //- our content to output;
+    - var loremIpsum = "";
+
+    //- randomize the content;
+    //- turn that giant string into an array (of sentences) so we can work with it;
+    - loremArray = loremText.split(sentenceSplit);
+    //- build a new random collection to work with;
+    - loremArray.forEach(function() {
+        //- grab a random sentence (might grab the same random sentences - it is random);
+        - var randomSentence = loremArray[Math.floor(Math.random() * loremArray.length)];
+        //- insert it into the working array;
+        - lipsumArray.push(randomSentence + sentenceSplit);
+        //- insert it inot the working string;
+        - lipsumText += randomSentence + sentenceSplit;
+    - });
+
+    //- output the content based on the options passed into the mixin;
+    //- output characters;
+    - if (type === "characters") {
+        //- we already created a random string of lorem ipsum, now we just need to grab X characters of it;
+        - loremIpsum = lipsumText.substr(0, amount);
+    //- output words
+    - } else if (type === "words") {
+        //- we have a random string of words, but we dont want punctuation;
+        - lipsumText = lipsumText.toLowerCase();
+        - lipsumText = lipsumText.split(".").join("");
+        - lipsumText = lipsumText.split(",").join("");
+        - lipsumArray = lipsumText.split(" ");
+        //- now we have an array of words without punctuation, we can grab X number of words;
+        - for (var i = 0; i < amount; i++) {
+            - loremIpsum += lipsumArray[i] + " ";
+        - }
+        //- capitalize the first letter of the first word;
+        - loremIpsum = loremIpsum.charAt(0).toUpperCase() + loremIpsum.slice(1);
+    //- output sentences;
+    - } else if (type === "sentences") {
+        //- we already created an array of random content, now we just need to grab X items from it;
+        - for (var i = 0; i < amount; i++) {
+            - loremIpsum += lipsumArray[i];
+        - }
+    - }
+
+    //- output what the dev asked for;
+    =loremIpsum

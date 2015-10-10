@@ -1,0 +1,66 @@
+footer#footer
+  .container.clearfix
+    ul.info
+      li
+        span &copy;BAIDU
+      li 
+        span 京ICP备13038739号 
+      li
+        span   
+          a(href="http://bbctop.com") Powered  by  BBCtop.com
+//-a#gotop(href='#x', data-spy='affix', data-offset-top='100')
+  i.ic.ic-up
+//-#sidenav
+  a.toggle-nav(href="#")
+  ul.nav
+    - navs = [{n:"PC站建设",u:"#index01"},{n:"建站标准",u:"#index02"},{n:"案例展示",u:"#index03"},{n:"自适应网站",u:"#index04"},{n:"自主建站流程",u:"#index05"}]
+    - each nav, i in navs
+      li: a(href="#{nav.u}")  !{nav.n}
+    li.gotop: a(href="#header"):  i.fi.fi-up
+//-.foot-menu
+  div
+    a(href='tel:')
+      img(src='img/fphone.png', alt='电话')
+      | 电话
+  div
+    a(href='#')
+      img(src='img/fmap.png', alt='')
+      | 地图
+  .bdsharebuttonbox(data-tag='share_1')
+    a.popup_more(onclick='return false', data-cmd='more', href='#x')
+      img(src='img/fsms.png', alt='')
+      | 分享
+  div
+    a(href='mailto:')
+      img(src='img/fmail.png', alt='')
+      | 邮箱
+#blueimp-gallery.blueimp-gallery
+  .slides
+  h3.title
+  a.prev ‹
+  a.next ›
+  a.close ×
+  a.play-pause
+  ol.indicator
+  .modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel")
+    //-.next next
+    //-.prev prev
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button.close(type="button", data-dismiss="modal", aria-label="Close")
+            span(aria-hidden="true") &#215;
+          h4.modal-title Modal title
+        .modal-body.next
+#confirm.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h4.modal-title 请注意!您即将离开百度PC站网站建设指南页面。 
+      .modal-footer.section-btn-center
+        a.btn(href="#", data-dismiss='modal') 不离开
+        a.btn(href="http://bbctop.com/index.php?act=casese.casese&cid=7" target="_blank") 确定离开
+script(src="js/jquery-1.11.2.min.js")
+script(src="js/core-dist.js")

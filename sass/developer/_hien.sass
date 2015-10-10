@@ -1,0 +1,625 @@
+$blue: #3385ff
+$red: #e10501
+@import url(../iconfont/iconfont.css)
+body
+  color: #444
+  font-family: "Microsoft Yahei", sans-serif
+  position: relative
+  overflow-x: hidden
+  overflow-y: scroll
+  @media (max-width: 767px)
+    min-width: 320px
+.zoom
+  overflow: hidden
+  position: relative
+  z-index: 2
+  img
+    +transition(transform 0.5s, -webkit-transform 0.5s)
+  &:hover
+    img
+      display: block
+      -webkit-transform: scale(1.1)
+      transform: scale(1.1)
+=nolist
+  list-style: none
+  padding: 0
+  margin: 0
+.nav
+  +nolist
+.header
+  margin-top: 20px
+.navbar
+  margin: 0 -20px
+  font-size: 16px
+  text-align: center
+  @extend .pull-left
+  @media (max-width: 767px)
+    float: initial !important
+    margin: 0 -15px
+  .nav
+    > li
+      float: left
+      padding: 0 20px
+      @media (max-width: 767px)
+        width: 33.3333%
+      > a
+        padding: 18px 0
+        color: #444
+        text-decoration: none
+        position: relative
+        @media (max-width: 767px)
+          display: inline-block
+        &:before
+          position: absolute
+          content: ""
+          display: block
+          bottom: -2px
+          left: 0
+          right: 0
+          width: 0%
+          height: 3px
+          background: $blue
+          margin: auto
+          +transition(width 0.35s)
+      &:hover,&.active
+        a
+          &:before
+            width: 100%
+      &.active a
+        color: $blue
+#logo
+  max-width: 33.333%
+.search
+  width: 220px
+  @extend .pull-right
+  position: relative
+  margin-top: 12px
+  @media (max-width: 767px)
+    width: 100% 
+    margin-top: 0
+  .form-control
+    height: 36px
+    line-height: 20px
+    font-size: 16px
+    +placeholder(#aaa)
+.login-link
+  @extend .pull-right
+  +nolist
+  padding: 20px 10px
+  line-height: 18px
+  font-size: 14px
+  margin-right: -15px
+  @media (max-width: 767px)
+    position: absolute
+    top: 10px
+    right: 10px
+  li
+    float: left
+    padding: 0 10px
+    &:first-child
+      border-right: 1px solid #999
+  a
+    color: #666
+    &:hover
+      color: $blue
+img
+  max-width: 100%
+  display: inline-block
+.img
+  overflow: hidden
+  position: relative
+  a
+    display: block
+  img
+    display: block
+    width: 100%
+    height: auto
+.btn-search
+  background: transparent
+  cursor: pointer
+  position: absolute
+  right: 0
+  top: 0
+  border: 0
+  line-height: 31px
+  +square(33px)
+  &:hover
+    color: $blue
+  &:focus
+    border: 0
+    outline: 0
+#header
+  padding: 15px 0 0
+  border-bottom: 1px solid #ccc
+  span, a
+    display: inline-block
+    vertical-align: top
+  span
+    margin-left: 12px
+    padding-left: 12px
+    font-size: 24px
+    line-height: 34px
+    margin-top: 17px
+    color: #666
+    border-left: 1px solid #d5d5d5
+.slider-link
+  padding: 15px 0
+  .nav
+    > li
+      float: left
+      > a, > span
+        display: block
+        padding: 5px 2px
+        line-height: 20px
+        vertical-align: middle
+        font-size: 16px
+        color: $blue
+        text-decoration: none
+        position: relative
+        z-index: 4
+      > span
+        &:before
+          display: inline-block
+          content: ""
+          +square(0)
+          border: 5px solid transparent
+          border-left: 7px solid $blue
+    .fi
+      font-size: 15px
+      margin-left: 2px
+      margin-right: 20px
+  .dropdown-menu > .active > a
+    &,
+    &:hover,
+    &:focus
+      background: $blue
+  .dropdown-menu
+    padding: 8px 0
+    > li > a
+      padding: 5px 20px
+    &:before
+      content: ""
+      display: block
+      +square(0px)
+      border: 8px solid transparent
+      border-top: 0
+      border-bottom: 8px solid #fff
+      position: absolute
+      top: -7px
+      left: 18px
+.gray
+  background: #eee
+.slider-grid
+  background: #f5f5f5
+  overflow: hidden
+  padding: 50px 0
+  margin: -50px 0
+  .owl-stage-outer
+    overflow: visible
+  .item
+    width: 1140px
+    position: relative
+    height: 620px
+    pointer-events: none
+    +opacity(.35)
+    +transition(opacity .35s)
+    @media (max-width: 1199px)
+      width: 940px
+      height: 510px
+    @media (max-width: 991px)
+      width: 720px
+      height: 390px
+    @media (max-width: 767px)
+      height: auto
+  .center
+    .item
+      +opacity(1)
+      pointer-events: auto
+.box-grid
+  position: absolute
+  h2
+    a
+      display: block
+  +square(20%)
+  &.g1
+    +square(60%)
+    h2
+      font-size: 36px
+    p
+      font-size: 22px
+  &.g2,&.g3
+    +square(40%)
+    h2
+      font-size: 24px
+    p
+      font-size: 18px
+  @media (max-width: 991px)
+    +square(25%)
+    &.g1,&.g2
+      +square(50%)
+      h2
+        font-size: 24px
+      p
+        font-size: 18px
+    &.g3
+      +square(25%)
+      h2
+        font-size: 18px
+        margin-bottom: 5px
+      p
+        font-size: 14px
+        margin-bottom: 0
+  .over
+    background: url(../img/g-overlay.png) repeat-x left -65%
+    background-size: auto 200%
+    position: absolute
+    +square(100%)
+    z-index: 2
+    top: 0
+    left: 0
+    +transition(background 0.35s)
+  &:hover
+    .over
+      background: url(../img/g-overlay.png) repeat-x left 100%
+      +opacity(0.5)
+  img
+    position: absolute
+    +square(100%)
+    top: 0
+    left: 0
+  .box-inside
+    border: 1px solid transparent
+    position: relative
+    height: 100%
+  .desc
+    position: absolute
+    bottom: 0
+    color: #FFF
+    left: 0
+    right: 0
+    margin: 15px
+    z-index: 3
+    h2,p
+      +text-overflow
+    a
+      color: #FFF
+      text-decoration: none
+  h2
+    font-size: 18px
+    margin-bottom: 5px
+    margin-top: 0
+  p
+    font-size: 14px
+    margin-bottom: 0
+.box-zoom
+  +transition(all .35s)
+  position: relative
+  height: 100%
+  &:hover
+    +scale(1.2)
+    z-index: 999
+    +box-shadow(0 2px 12px rgba(0,0,0,0.5))
+
+%left0
+  left: 0
+%leftxs0
+  left: 0
+%leftxs25
+  left: 25%
+%leftxs50
+  left: 50%
+%leftxs75
+  left: 75%
+%left20
+  left: 20%
+%left40
+  left: 40%
+%left60
+  left: 60%
+%left80
+  left: 80%
+%top0
+  top: 0
+%topxs0
+  top: 0
+%topxs25
+  top: 25%
+%topxs50
+  top: 50%
+%topxs75
+  top: 75%
+%top20
+  top: 20%
+%top40
+  top: 40%
+%top60
+  top: 60%
+%top80
+  top: 80%
+
+=pos($top, $left)
+  @extend %top#{$top}
+  @extend %left#{$left}
+=pos-sm($top, $left)
+  top: $top + %
+  left: $left + %
+.box-grid-s1
+  .g1
+    +pos(0, 0)
+  .g2
+    +pos(20, 60)
+  .g3
+    +pos(60, 40)
+  .g4
+    +pos(0, 60)
+  .g5
+    +pos(60, 0)
+  .g6
+    +pos(60, 20)
+  .g7
+    +pos(60, 80)
+  @media (max-width: 991px)
+    .g2
+      +pos-sm(25, 50)
+    .g3
+      +pos-sm(0, 75)
+    .g4
+      +pos-sm(50, 0)
+    .g5
+      +pos-sm(75, 0)
+    .g6
+      +pos-sm(75, 25)
+    .g7
+      +pos-sm(75, 75)
+
+    
+.heading
+  text-align: center
+  padding: 40px 0 30px
+  color: #555
+  h1
+    margin: 0
+    font-size: 28px
+    span
+      display: block
+    .ch
+      font-size: 1em
+    .en      
+      text-transform: uppercase
+      font-size: 0.75em
+      +opacity(0.6)
+  .line
+    background: $red
+    +size(5em,2px)
+    margin: 16px auto 0
+  &.s2
+    color: #fff
+    text-shadow: 1px 2px #000 
+.scrollable
+  font-size: 16px
+  line-height: 1.8em
+  height: 1.8em * 13.5
+  position: relative
+  @media (max-width: 1199px)
+    height: 1.8em * 9.8
+  @media (max-width: 991px)
+    height: 1.8em * 7.6
+  h2
+    margin-top: 20px
+    margin-bottom: 5px
+    font-size: 22px
+  p
+    margin-bottom: 5px
+    margin-top: 0
+#index02
+  .img
+    text-align: center
+    img
+      max-width: 700px
+      margin: -4px auto
+  .scrollable
+    height: 1.8em * 9.8
+    @media (max-width: 1199px)
+      height: 14.2em
+    @media (max-width: 1199px)
+      height: 1.8em * 6
+.parallax
+  background: transparent
+  min-height: 200px
+.space20
+  height: 40px
+.space40
+  height: 40px
+.space50
+  height: 50px
+.anli-item
+  margin-bottom: 30px
+.section-btn-center
+  text-align: center
+.btn
+  display: inline-block
+  color: #FFF
+  padding: 15px 30px
+  line-height: 20px
+  font-size: 16px
+  background: $red
+  &:hover, &:focus
+    background: darken($red, 10%)
+    color: #FFF
+    text-decoration: none
+#index03
+  .patern-parallax
+    background: url(../img/gridtile.png) rgba(0,0,0,0.3)
+.anli-items
+  max-width: 940px
+  margin: auto
+.anli-item
+  a
+    border: 2px solid #FFF
+#index04
+  color: #FFF
+  .patern-parallax
+    background: #5b5bce
+    background: rgba(84,84,197,0.95)
+.lc-item
+  position: relative
+  border-top: 1px solid #ddd
+  border-left: 1px solid #ddd
+  +transition(color 0.35s, background 0.35s)
+  .lc-content
+    position: absolute
+    height: 120px
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 70%
+    margin: auto
+    text-align: center
+    overflow: hidden
+  &:before
+    content: ""
+    padding-top: 75%
+    height: 0
+    display: block
+  i
+    display: block
+    font-size: 48px
+    line-height: 1.75em
+    +square(1.75em)
+    background: $red
+    color: #FFF
+    border-radius: 50%
+    margin: auto
+    text-align: center
+    +transition(all 0.35s)
+    margin-top: 0
+  .no
+    font-size: 24px
+  h3
+    margin: 5px 0
+  &:hover
+    background: $red
+    color: #FFF
+    i
+      +scale(0)
+      font-size: 0
+.lc-items
+  position: relative
+  border-right: 1px solid #ddd
+  border-bottom: 1px solid #ddd
+#footer
+  background: #444
+  color: #bbb
+  text-align: center
+  padding: 30px 0
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+  li
+    display: inline-block
+    margin: 0 10px
+  a
+    color: #bbb
+    &:hover
+      color: #ddd
+#sidenav
+  width: 100px
+  position: fixed
+  top: 100px
+  text-align: center
+  right: 0
+  z-index: 999
+  +transition(right 0.35s ease)
+  @media (max-width: 767px)
+    top: 50px
+  &.closed
+    right: -100px
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+    border-bottom: 1px solid #ccc
+  li > a
+    display: block
+    background: #FFF
+    color: #666
+    border: 1px solid #ccc
+    border-bottom: 0
+    padding: 15px 0
+    line-height: 20px
+    text-decoration: none
+    &:hover
+      background: #eee
+  li.active > a
+    background: $red
+    border-color: $red
+    color: #FFF
+  .gotop
+    +transition(all 0.35s)
+    &.active
+      +opacity(0)
+      visibility: hidden
+      height: 0
+.toggle-nav
+  font-size: 12px
+  width: 24px
+  line-height: 1.2em
+  text-align: center
+  padding: 15px 5px
+  background: #ae0000
+  position: absolute
+  border: 1px solid #d5d5d5
+  border-right: 0
+  top: 0
+  left: -24px
+  border-radius: 5px 0 0 5px
+  color: #fff
+  display: block
+  z-index: 992
+  border: 0
+  color: #FFF
+  &:hover, &:focus
+    text-decoration: none
+    color: #FFF
+  &:before
+    content: "关闭"
+    display: block
+  .closed &
+    &:before
+      content: "展开"
+.blueimp-gallery
+  text-align: center
+  h4
+    font-weight: bold
+    color: #666
+  .modal
+    overflow: hidden
+  .active .modal
+    overflow-y: scroll
+  .modal-body
+    padding: 0
+  &.blueimp-gallery >
+    .next, .prev
+      display: block
+  @media (min-width: 768px)
+    .modal-dialog
+      width: auto
+      margin: 30px 20px
+      display: inline-block
+  @media (max-width: 767px)
+    .modal-dialog
+      width: auto
+      margin: 10px
+      display: inline-block
+.modal
+  h4
+    font-size: 20px
+  p
+    margin: 0 0 5px
+    font-size: 16px
+#confirm
+  text-align: center
+  .btn
+    padding: 8px 15px

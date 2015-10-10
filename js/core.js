@@ -1,0 +1,12 @@
+// @prepros-append bootstrap/transition.js
+// @prepros-append bootstrap/dropdown.js
+// @prepros-append bootstrap/affix.js
+// @prepros-append bootstrap/scrollspy.js
+// @prepros-append bootstrap/modal.js
+// @prepros-append third/parallax.js
+// @prepros-append third/jquery.tinyscrollbar.js
+// @prepros-append third/owl.carousel.js
+// @prepros-append third/parallax.js
+// @prepros-append third/jquery.blueimp-gallery.min.js
+// @prepros-append third/bootstrap-image-gallery.min.js
+// @prepros-append third/smoothscrolling.js

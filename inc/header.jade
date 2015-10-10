@@ -1,0 +1,26 @@
+header#header
+  .container
+    .brand
+      a#logo(href="#")
+        img(src="img/logo.png")
+    .header.clearfix
+      ul.login-link.clearfix
+        li: a(href="#") 注册
+        li: a(href="#") 登录
+      .search
+        form
+          .search-group
+            input.form-control(placeholder="输入关键字")
+            button.btn-search(type="submit"): i.fi.fi-search
+      .navbar
+        ul.nav.clearfix
+          - navs = [{n:"网站首页",u:"index.html"},{n:"精细检索",u:"#"},{n:"关于我们",u:"#"}]
+          - each nav, i in navs
+            - status = ""
+            if (cur == i)
+              - status = "active"
+            li(class="#{status}"): a(href="#{nav.u}") #{nav.n}
+          
+
+
+      
