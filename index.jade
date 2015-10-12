@@ -8,6 +8,7 @@ html
       .slider-link
         .container
 
+<<<<<<< HEAD
           ul.nav.clearfix
             li: span 快速筛选：
             li.dropdown
@@ -87,6 +88,55 @@ html
         .section-btn-center
           a.btn(href="#") MORE »
         .space50
+=======
+        ul.nav.clearfix
+          li: span 快速筛选：
+          li.dropdown
+            a(href="#" data-toggle="dropdown") 更新时间
+              i.fi.fi-down
+            ul.dropdown-menu
+              - navs = ["最近三天","本周","当月","近三个月","全部"]
+              - each nav, i in navs
+                - status = ""
+                  if (cur == i)
+                    - status = "active"
+                li(class="#{status}"): a(href="#") #{nav}
+          li.dropdown
+            a(href="#" data-toggle="dropdown") 点播次数
+              i.fi.fi-down
+            ul.dropdown-menu
+              - navs = ["最多","最小"]
+              - each nav, i in navs
+                - status = ""
+                  if (cur == i)
+                    - status = "active"
+                li(class="#{status}"): a(href="#") #{nav}
+          li.dropdown
+            a(href="#" data-toggle="dropdown") 项目分类
+              i.fi.fi-down
+            ul.dropdown-menu
+              - navs = ["分类一","分类二","分类三"]
+              - each nav, i in navs
+                - status = ""
+                  if (cur == i)
+                    - status = "active"
+                li(class="#{status}"): a(href="#") #{nav}
+    .slider-grid.owl-carousel
+      - for (i=1; i<8; i++)
+        .item.box-xs-grid.box-grid-s1
+          - for (a=1; a<8; a++)
+            div(class="box-grid g#{a}")
+              .box-inside
+                .box-zoom
+                  a.over(href="#")
+                  img(src="img/pic#{a}.jpg")
+                  .desc
+                    h2 
+                      a(href="#") 项目名称
+                    p 北京超越无限信息技术有限公司
+      //注意要留下最后这个空白div TRUNG EDITED
+      .item
+>>>>>>> origin/master
     include inc/footer.jade
     script.
       $(function(){
