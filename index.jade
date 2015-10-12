@@ -4,62 +4,154 @@ html
   body
     - cur = 0
     include inc/header.jade
-    .slider-link
-      .container
+    section.lgray
+      .slider-link
+        .container
 
-        ul.nav.clearfix
-          li: span 快速筛选：
-          li.dropdown
-            a(href="#" data-toggle="dropdown") 更新时间
-              i.fi.fi-down
-            ul.dropdown-menu
-              - navs = ["最近三天","本周","当月","近三个月","全部"]
-              - each nav, i in navs
-                - status = ""
-                  if (cur == i)
-                    - status = "active"
-                li(class="#{status}"): a(href="#") #{nav}
-          li.dropdown
-            a(href="#" data-toggle="dropdown") 点播次数
-              i.fi.fi-down
-            ul.dropdown-menu
-              - navs = ["最多","最小"]
-              - each nav, i in navs
-                - status = ""
-                  if (cur == i)
-                    - status = "active"
-                li(class="#{status}"): a(href="#") #{nav}
-          li.dropdown
-            a(href="#" data-toggle="dropdown") 项目分类
-              i.fi.fi-down
-            ul.dropdown-menu
-              - navs = ["分类一","分类二","分类三"]
-              - each nav, i in navs
-                - status = ""
-                  if (cur == i)
-                    - status = "active"
-                li(class="#{status}"): a(href="#") #{nav}
-    .slider-grid.owl-carousel
-      - for (i=1; i<8; i++)
-        .item.box-xs-grid.box-grid-s1
-          - for (a=1; a<8; a++)
-            div(class="box-grid g#{a}")
-              .box-inside
-                .box-zoom
-                  a.over(href="#")
-                  img(src="img/pic#{a}.jpg")
-                  .desc
-                    h2 
-                      a(href="#") 项目名称
-                    p 北京超越无限信息技术有限公司
-      //注意要留下最后这个空白div
-      .item
+          ul.nav.clearfix
+            li: span 快速筛选：
+            li.dropdown
+              a(href="#" data-toggle="dropdown") 更新时间
+                i.fi.fi-down
+              ul.dropdown-menu
+                - navs = ["最近三天","本周","当月","近三个月","全部"]
+                - each nav, i in navs
+                  - status = ""
+                    if (cur == i)
+                      - status = "active"
+                  li(class="#{status}"): a(href="#") #{nav}
+            li.dropdown
+              a(href="#" data-toggle="dropdown") 点播次数
+                i.fi.fi-down
+              ul.dropdown-menu
+                - navs = ["最多","最小"]
+                - each nav, i in navs
+                  - status = ""
+                    if (cur == i)
+                      - status = "active"
+                  li(class="#{status}"): a(href="#") #{nav}
+            li.dropdown
+              a(href="#" data-toggle="dropdown") 项目分类
+                i.fi.fi-down
+              ul.dropdown-menu
+                - navs = ["分类一","分类二","分类三"]
+                - each nav, i in navs
+                  - status = ""
+                    if (cur == i)
+                      - status = "active"
+                  li(class="#{status}"): a(href="#") #{nav}
+      .slider-grid.owl-carousel
+        - for (i=1; i<6; i++)
+          .item.box-xs-grid.box-grid-s
+            - for (a=1; a<8; a++)
+              div(class="box-grid g#{a}")
+                .box-inside
+                  .box-zoom
+                    a.over(href="#")
+                    img(src="img/pic#{a}.jpg")
+                    .desc
+                      h2 
+                        a(href="#") 项目名称 #{i}
+                      p 北京超越无限信息技术有限公司
+        //注意要留下最后这个空白div
+        .item.lastest
+      .page-slider
+        ul
+          li: a(href="#") 首页
+          li: a(href="#" data-nav="prev"): i.fi.fi-left
+          li.active: a(href="#" data-slide="1") 1
+          - for (i=2; i<6; i++)
+            li: a(href="#" data-slide="#{i}") #{i}
+          li: a(href="#" data-nav="next"): i.fi.fi-right
+          li: a(href="#") 末页
+          li: span: input#ipt-go(type="text")
+          li: a#btn-go(href="#") GO
+      .space50
+    section#about.gray
+      .container
+        .heading
+          h1
+            span.ch 关于我们
+            span.en About Us
+          .line
+        .about-desc
+          p 北京超越无限信息技术有限公司，成立于2010年。公司主要从
+          p 事计算机信息系统专业技术服务，包括软件应用系
+          p 统开发、技术咨询、技术培训、服务等相关业务和产品销售。公司坚持“面向应用，注重专业”的发展思
+          p 路，提供专业的应用整体解决方案和服务，同时注重加强专业解决方案的开发与系统集
+          p 事计算机信息系统专业技术服务，包括软件应用系
+          p 统开发、技术咨询、技术培训、服务等相关业务和产品销售。公司坚持“面向应用，注重专业”的发展思
+          p 路，提供专业的应用整体解决方案和服务，同时注重加强专业解决方案的开发与系统集
+          p 事计算机信息系统专业技术服务，包括软件应用系
+          p .........
+        .section-btn-center
+          a.btn(href="#") MORE »
+        .space50
     include inc/footer.jade
     script.
-      $(".slider-grid").owlCarousel({
-        margin:0,
-        loop:false,
-        autoWidth:true,
-        items:1,
-        center: true
+      $(function(){
+        var l = $(".slider-grid .item").length
+        var ar = ["s1","s2","s3","s4","s5","s6","s0"]
+        $(".slider-grid .item").each(function(){
+          var rand = ar[Math.floor(Math.random() * ar.length)]; 
+          $(this).addClass(rand);
+          console.log(rand);
+        })
+        var d = $(".slider-grid").html();
+        owl = $(".slider-grid").owlCarousel({
+          margin:0,
+          loop:false,
+          autoWidth:false,
+          dots: true,
+          items:1,
+          center: true,
+          smartSpeed: 350,
+          navText: ['<i class="fi fi-left"></i>','<i class="fi fi-right"></i>'],
+          responsive: {
+            768: {autoWidth: true,items:1}
+          }
+        }).on("resize.owl.carousel",function(){
+          if($(window).width() < 768){
+            var t = $(".slider-grid .item").length
+            if(t == l){
+              owl.trigger("remove.owl.carousel",[l-1])
+            }
+          }else{
+            var t = $(".slider-grid .item").length
+            if(t == l-1){
+              owl.trigger("replace.owl.carousel",[d])
+            }
+          }
+        }).on("changed.owl.carousel",function(e){
+          i = parseInt(e.page.index + 1)
+          $(".page-slider li").removeClass("active")
+          $(".page-slider [data-slide='"+i+"']").parent().addClass("active")
+        })
+        if($(window).width() < 768){
+          owl.trigger("remove.owl.carousel",[l-1])
+        }
+        $("[data-slide]").click(function(e){
+          e.preventDefault();
+          a = parseInt($(this).data("slide") - 1);
+          owl.trigger("to.owl.carousel",[a,350]);
+        })
+        $("#btn-go").click(function(e){
+          e.preventDefault();
+          var t = $("#ipt-go").val();
+          console.log(t)
+          if(t == ""){
+            $("#ipt-go").focus();
+          }else{
+            b = parseInt(t - 1);
+            owl.trigger("to.owl.carousel",[b,350]);
+            $("#ipt-go").val("");
+          }
+        })
+        $("[data-nav]").click(function(e){
+          e.preventDefault();
+          var r = $(this).data("nav");
+          owl.trigger(r+'.owl.carousel');
+        })
       })
+      //if($(window).width() < 768)
+      //  owl.trigger('refresh.owl.carousel')
