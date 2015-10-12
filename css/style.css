@@ -3327,8 +3327,70 @@ img {
           z-index: 0; }
 
 .gallery-0020 .grid {
-  text-align: center; }
-  .gallery-0020 .grid .gallery-item figure img {
-    width: 100%; }
-  .gallery-0020 .grid .gallery-item figure figcaption span {
-    text-align: left; }
+  padding: 0; }
+  .gallery-0020 .grid .gallery-item {
+    padding: 30px 15px 5px 15px; }
+    .gallery-0020 .grid .gallery-item figure .image {
+      position: relative; }
+      .gallery-0020 .grid .gallery-item figure .image img {
+        width: 100%; }
+      .gallery-0020 .grid .gallery-item figure .image:before {
+        content: attr(data-content);
+        position: absolute;
+        color: #fff;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        padding: 5px;
+        font-size: 0.75em;
+        text-align: center;
+        background: black;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box; }
+      .gallery-0020 .grid .gallery-item figure .image:after {
+        content: "\a";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 1;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s; }
+      .gallery-0020 .grid .gallery-item figure .image:hover:after {
+        opacity: 0; }
+    .gallery-0020 .grid .gallery-item figure figcaption a {
+      text-align: center;
+      color: #333333; }
+      .gallery-0020 .grid .gallery-item figure figcaption a:hover {
+        text-decoration: none; }
+  .gallery-0020 .grid .page {
+    padding: 30px 15px; }
+    .gallery-0020 .grid .page ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      text-align: center; }
+      .gallery-0020 .grid .page ul li {
+        list-style: none;
+        float: left; }
+        .gallery-0020 .grid .page ul li i {
+          font-size: 18px; }
+        .gallery-0020 .grid .page ul li a, .gallery-0020 .grid .page ul li .ipt-go, .gallery-0020 .grid .page ul li .btn-go {
+          text-decoration: none;
+          display: block;
+          border: 1px solid #d5d5d5;
+          margin: 5px;
+          padding: 5px 10px;
+          color: #666666; }
+        .gallery-0020 .grid .page ul li .ipt-go, .gallery-0020 .grid .page ul li .btn-go {
+          width: 40px;
+          display: inline-block;
+          margin: 5px 0;
+          margin-right: -5px; }
+    .gallery-0020 .grid .page .active > a {
+      background-color: #3385ff;
+      border: 1px solid transparent;
+      color: #fff; }

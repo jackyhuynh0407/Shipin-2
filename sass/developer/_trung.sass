@@ -57,12 +57,72 @@
 						z-index: 0
 .gallery-0020
 	.grid
-		text-align: center
+		padding: 0
 		.gallery-item
+			padding: 30px 15px 5px 15px
 			figure
-				img
-					width: 100%
+				.image
+					position: relative
+					img
+						width: 100%
+					&:before
+						content: attr(data-content)
+						position: absolute
+						color: #fff
+						z-index: 1
+						bottom: 0
+						right: 0
+						padding: 5px
+						font-size: 0.75em
+						text-align: center
+						background: black
+						box-sizing: border-box
+						-moz-box-sizing: border-box
+					&:after
+						content: '\A'
+						position: absolute
+						width: 100%
+						height: 100%
+						top: 0
+						left: 0
+						background: rgba(0,0,0,0.6)
+						opacity: 1
+						transition: all 0.5s
+						-webkit-transition: all 0.5s
+					&:hover:after
+						opacity: 0
 				figcaption
-					span
-						text-align: left
-			
+					a
+						text-align: center
+						color: #333333
+						&:hover	
+							text-decoration: none
+		.page
+			padding: 30px 15px
+			ul
+				list-style: none
+				padding: 0
+				margin: 0
+				display: inline-block
+				text-align: center
+				li
+					list-style: none
+					float: left
+					i
+						font-size: 18px
+					a, .ipt-go, .btn-go
+						text-decoration: none
+						display: block
+						border: 1px solid #d5d5d5
+						margin: 5px
+						padding: 5px 10px
+						color: #666666
+					.ipt-go, .btn-go
+						width: 40px
+						display: inline-block
+						margin: 5px 0
+						margin-right: -5px
+			.active > a
+				background-color: #3385ff
+				border: 1px solid transparent
+				color: #fff
