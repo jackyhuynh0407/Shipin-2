@@ -31,7 +31,7 @@ html
                 .form-group
                   label 项目介绍：
                   textarea.form-control(rows="5")
-                #box-upload-image .form-group
+                #box-upload-image
                   img(src="img/image-upload.png", alt="image upload", class="img-upload resize")
                   img(src="img/image-upload.png", alt="image upload", class="img-upload resize")
                   img(src="img/image-upload.png", alt="image upload", class="img-upload resize")
@@ -40,11 +40,5 @@ html
                   label 项目介绍：
                   textarea.form-control(rows="5")
 
-        .box-content
-          .deal
-            .form-group
-              input(type="checkbox") 
-              span 我承诺以上登记的所有信息都是绝对真实的，并对因虚假信息产生的一切后果负全责。
-              button.btn-blue(type="submit") 保存项目信息
-
+        include inc/box-deal.jade
     include inc/contact.jade

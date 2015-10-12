@@ -85,6 +85,11 @@ section
         border-left: 1px solid #CCC
         @media (max-width:991px)
           border-left: none
+      .box-info-content-70
+        width: 300px
+        margin: auto
+        p
+          text-align: left
       a.icon-content
         width: 150px
         height: 150px
@@ -98,7 +103,6 @@ section
           width: 125px
           height: 125px
           margin-top: 7px
-          margin-left: 2px
           display: inline-block
           line-height: 118px
           font-size: 82px
@@ -151,13 +155,14 @@ section
     .form-group input
       border-radius: 2px
     .hcode input.form-control
-      width: 65%
+      width: 67%
       float: left
     .hcode .getCode-prefix-na
       width: 30%
-      float: left
+      float: right
     .hcode .getCode-prefix-na .btn
       display: inline-block
+      width: 100%
       background: $green
       color: #FFF
       height: 33px
@@ -168,6 +173,7 @@ section
       float: left
     .deal span
       margin-left: 8px
+      float: left
     .deal span b
       color: $red
       margin-left: 5px
@@ -233,6 +239,10 @@ section
       .form-control
         width: 100%
 
+.deal2 span
+  float: none !important
+
+
 #content-100
   width: 60%
   margin: auto
@@ -247,8 +257,11 @@ section
     color: $red
   .deal span
     font-size: 13px
+    float: left
     @media (max-width:991px)
       margin-left: 7px
+    @media (max-width:642px)
+      float: none
 
 #content-110
   .form-110
@@ -285,18 +298,22 @@ section
 #content-190
   #box-upload-image
     float: left
-    padding-left: 114px
+    padding-left: 20%
+    margin-bottom: 15px
     .resize
       width: 80px
       height: 80px
       margin-right: 10px
+      position: relative
+      vertical-align: middle
     .a-upload
       display: inline-block
       border: 1px solid #CCC
       span
         font-size: 16px
+        display: block
         b
-          font-size: 19px
+          font-size: 34px
           display: block
 
 #content-210
