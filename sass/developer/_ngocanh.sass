@@ -1,0 +1,349 @@
+
+$blue: #3385ff
+$red: #e10501
+$green: #04b411
+@import url(../iconfont/iconfont.css)
+
+button.btn-blue
+  width: 100%
+  border: none
+  padding: 8px 0px
+  background: $blue
+  color: #FFF
+  font-size: 16px
+  span
+    font-size: 25px
+
+.deal button.btn-blue
+  display: block
+  width: 40%
+  margin: 15px auto 0px auto
+
+ul 
+  margin: 0px
+  padding: 0px
+  list-style: none
+h1, h2, h3, h4, h5, h6
+  margin: 0px
+
+a,a:hover
+  text-decoration: none
+
+body
+  font-family: "Microsoft Yahei", sans-serif
+header
+  #user-link
+    font-size: 12px
+    border-bottom: 1px solid $blue
+    overflow: hidden
+    ul
+      display: block
+      float: right
+      padding: 17px 0px
+      @media (max-width:991px)
+        float: none
+        text-align: center
+      li
+        display: inline-block
+        padding: 0px 5px
+        border-right: 1px solid #666
+        &:first-child, &:last-child
+          border-right: none
+        a 
+          color: #666666
+  #banner
+    border-bottom: 1px solid #cfcfcf
+    img
+      display: block
+      margin: 10px auto 30px auto
+
+section
+  background: #f5f5f5
+  padding: 40px 0px
+  #greeting
+    text-align: center
+    font-size: 18px
+    font-weight: bold
+    margin-bottom: 30px
+  #btn-content
+    display: inline-block
+    margin-top: 15px
+    padding: 15px 150px
+    background: #efefef
+    color: #666
+    font-size: 18px
+    font-weight: bold 
+  .box-content
+    text-align: center
+    background: #FFF
+    padding: 40px
+    overflow: hidden
+    margin-top: 10px
+    .box-info-content
+      margin: 30px 0px
+      &:last-child
+        border-left: 1px solid #CCC
+        @media (max-width:991px)
+          border-left: none
+      a.icon-content
+        width: 150px
+        height: 150px
+        display: inline-block
+        padding: 5px
+        background: #FFF
+        border-radius: 50%
+        border: 1px solid #c5c5c5
+        margin-bottom: 25px
+        span
+          width: 125px
+          height: 125px
+          margin-top: 7px
+          margin-left: 2px
+          display: inline-block
+          line-height: 118px
+          font-size: 82px
+          color: #c5c5c5
+          background: #ececec
+          border-radius: 50%
+          transition: all 350ms
+        &:hover span
+          background: $blue
+          color: #FFF
+    h2 a
+      display: block
+      font-size: 28px
+      color: #666
+      margin-bottom: 10px
+    .title-box-content
+      font-size: 16px
+      font-weight: bold
+      display: block
+      margin-bottom: 15px
+    a.icon-content-small
+      display: inline-block
+      padding-top: 7px
+      width: 90px
+      height: 90px
+      border-radius: 50%
+      margin-left: 30px
+      border: 1px solid #CCC
+    a.icon-content-small .fi
+      width: 75px
+      height: 75px
+      line-height: 75px
+      border-radius: 50%
+      font-size: 55px
+      display: inline-block
+    a.icon-content-small .fi-wechat
+      background: $green
+      color: #FFF
+    a.icon-content-small .fi-sina
+      background: #FFF
+      color: #da251c
+    a.icon-content-small .title
+      display: block
+      color: #666
+      margin-top: 10px
+    .form-group
+      width: 100%
+      overflow: hidden
+      margin: 0px auto 15px auto
+    .form-group input
+      border-radius: 2px
+    .hcode input.form-control
+      width: 65%
+      float: left
+    .hcode .getCode-prefix-na
+      width: 30%
+      float: left
+    .hcode .getCode-prefix-na .btn
+      display: inline-block
+      background: $green
+      color: #FFF
+      height: 33px
+      font-size: 16px
+      line-height: 0px
+      border: none
+    .deal input#check-deal
+      float: left
+    .deal span
+      margin-left: 8px
+    .deal span b
+      color: $red
+      margin-left: 5px
+
+#content-80, #content-90, #content-190
+  #box-upload
+    width: 190px
+    margin: auto
+    @media (max-width:768px)
+      float: none
+      margin: auto
+    #image-upload
+      width: 100%
+      border: 1px solid #CCC
+      height: 140px
+      span
+        font-size: 40px
+        color: #CCC
+        line-height: 140px
+    b
+      display: block
+      margin: 10px 0px
+    p
+      color: #CCC
+      text-align: left
+  form
+    width: 80%
+    @media (max-width:768px)
+      margin-top: 15px
+      width: 100%
+      padding: 0px 15px
+    @media (max-width:576px)
+      width: 100%
+      font-size: 12px
+    .form-group
+      margin-bottom: 25px
+      label
+        width: 20%
+        float: left
+        line-height: 25px
+        font-weight: normal
+        color: #666
+        @media (max-width:576px)
+          width: 25%
+        @media (max-width:444px)
+          width: 30%
+      .form-control
+        width: 80%
+        border-radius: 2px
+        @media (max-width:576px)
+          width: 75%
+        @media (max-width:444px)
+          width: 70%
+
+#content-90
+  #image-upload
+    height: 131px !important
+  form
+    .col-lg-6, .col-lg-12
+      padding-right: 15px
+    .form-group
+      width: 100%
+      .form-control
+        width: 100%
+
+#content-100
+  width: 60%
+  margin: auto
+  overflow: hidden
+  @media (max-width:991px)
+    width: 100%
+  span.input-group-addon
+    font-size: 19px
+    font-weight: bold
+  p
+    float: left
+    color: $red
+  .deal span
+    font-size: 13px
+    @media (max-width:991px)
+      margin-left: 7px
+
+#content-110
+  .form-110
+    width: 80%
+    overflow: hidden
+    margin: auto
+    .deal
+      span
+        float: left
+      ul
+        float: right
+        li
+          display: inline-block
+          padding: 0px 10px
+          &:first-child
+            border-right: 1px solid #666
+          a
+            color: #666
+
+
+#content-120
+  width: 50%
+  margin: auto
+  overflow: hidden
+  @media (max-width:991px)
+    width: 80%
+  @media (max-width:768px)
+    width: 100%
+    font-size: 13px
+  .hcode input.form-control
+    width: 70%
+
+
+#content-190
+  #box-upload-image
+    float: left
+    padding-left: 114px
+    .resize
+      width: 80px
+      height: 80px
+      margin-right: 10px
+    .a-upload
+      display: inline-block
+      border: 1px solid #CCC
+      span
+        font-size: 16px
+        b
+          font-size: 19px
+          display: block
+
+#content-210
+  width: 180px
+  margin: auto
+  #player-website
+    padding: 40px 32px
+    border: 1px solid #CCC
+    img
+      width: 100%
+  button.btn-blue
+    margin-top: 30px
+
+
+#contact-website
+  border-top: 1px solid $blue
+  padding: 15px 0px
+  .box-contact
+    p.title-contact
+      font-weight: bold
+      font-size: 15px
+      margin-bottom: 15px
+    label
+      font-weight: normal
+      width: 300px
+      @media (max-width:489px)
+        display: block
+  #form-contact
+    border-left: 1px solid #CCC
+    padding-left: 60px
+    @media (max-width:991px)
+      border-left: none
+      padding: 15px
+    textarea
+      float: left
+      width: 86%
+      @media (max-width:1200px)
+        width: 95%
+    label
+      width: 70px
+      float: left
+      line-height: 30px
+    .col-lg-6
+      margin-bottom: 15px
+      input
+        width: 171px
+        float: left
+        @media (max-width:991px)
+          width: 86%
+      

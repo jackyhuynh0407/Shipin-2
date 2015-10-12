@@ -1,0 +1,21 @@
+#contact-website
+  .container
+    .row
+      .col-lg-6.col-md-6.col-sm-12.col-xs-12.box-contact
+        p.title-contact 联系我们/Contact Us
+        p <label>北京超越无限信息技术有限公司</label>电话:  （86）10 0000 0000
+        p <label>中国北京市朝阳区建国路93号万达广场</label>传真:  （86）10 0000 0000
+        p <label>电子邮件：00000@00000.com.cn</label>技术支持：00000@00000.com.cn
+      .col-lg-6.col-md-6.col-sm-12.col-xs-12.box-contact#form-contact
+        p.title-contact 给我们留言/Leave us a message
+        form(action="#",method="post")
+          .row
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                label 姓       名：
+                input.form-control(type='text')
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12
+              label 联系方式：
+              input.form-control(type='text')
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              label 留言内容：
+              textarea.form-control.textarea-contact(row="4", col="50")

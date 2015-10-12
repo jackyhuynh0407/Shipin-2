@@ -1,0 +1,50 @@
+doctype html
+html
+  include inc/head.jade
+  body
+    include inc/header2.jade
+    section
+      .container
+        h1#greeting 增加新阶段`
+        .box-content
+          #content-190
+            .col-lg-4.col-md-4.col-sm-4.col-xs-12
+              #box-upload
+                #image-upload
+                  img(src="img/no-avatar.png",alt="avatar upload")
+                button.btn-blue(type="submit") 点击修改本人头像
+                p 建议您上传500*500像素以上的 正方形头像，大小不超过2MB
+            .col-lg-8.col-md-8.col-sm-8.col-xs-12
+              form(action="",method="post")
+                .form-group
+                  label 项目名称：
+                  input.form-control(type="text")
+                .form-group
+                  label 一句话介绍：
+                  input.form-control(type="text")
+                .form-group
+                  label 行业领域：
+                  input.form-control(type="text",placeholder="“最多可选择5个领域”")
+                .form-group
+                  label 所属阶段：
+                  select.form-control
+                .form-group
+                  label 项目介绍：
+                  textarea.form-control(rows="5")
+                #box-upload-image .form-group
+                  img(src="img/image-upload.png", alt="image upload", class="img-upload resize")
+                  img(src="img/image-upload.png", alt="image upload", class="img-upload resize")
+                  img(src="img/image-upload.png", alt="image upload", class="img-upload resize")
+                  a(href="#", title="upload", class="a-upload resize")<span><b>+</b>插入图片</span>
+                .form-group
+                  label 项目介绍：
+                  textarea.form-control(rows="5")
+
+        .box-content
+          .deal
+            .form-group
+              input(type="checkbox") 
+              span 我承诺以上登记的所有信息都是绝对真实的，并对因虚假信息产生的一切后果负全责。
+              button.btn-blue(type="submit") 保存项目信息
+
+    include inc/contact.jade
