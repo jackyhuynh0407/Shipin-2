@@ -37,8 +37,25 @@ html
                   img(src="img/image-upload.png", alt="image upload", class="img-upload resize")
                   a(href="#", title="upload", class="a-upload resize")<span><b>+</b>插入图片</span>
                 .form-group
+                  label 团队介绍：
+                  .image-left
+                    img(src="img/image-content-190.png", alt="image-content-190")
+                  .box-right
+                    .form-group
+                      label 姓名：
+                      input.form-control(type="text")
+                    .form-group
+                      label 类别：
+                      input.form-control(type="text")
+                    .form-group
+                      label 职务：
+                      input.form-control(type="text")
+                .form-group
+                  label 个人简介：
+                  textarea.form-control(rows="5")
+                .form-group
                   label 项目介绍：
                   textarea.form-control(rows="5")
-
         include inc/box-deal.jade
     include inc/contact.jade
+    include inc/footer.jade

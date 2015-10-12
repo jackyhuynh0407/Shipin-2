@@ -1,0 +1,94 @@
+doctype html
+html
+	include inc/head.jade
+	body
+		- cur = 1
+		include inc/header.jade
+		.trung-top-filter
+			.container
+				ul.nav.clearfix
+					li
+						.search
+							form
+								.search-group
+									input.form-control(placeholder="输入关键字")
+									button.btn-search(type="submit"): i.fi.fi-search
+					li
+						.select-box
+							label.custom-select
+								select#sel
+									option(selected) 项目分类
+									option 项目分类 1
+									option 项目分类 2
+									option 项目分类 3
+								.select-text
+					li
+						.select-box
+							label.custom-select
+								select#sel
+									option(selected) 更新时间
+									option 更新时间 1
+									option 更新时间 2
+									option 更新时间 3
+								.select-text
+					li
+						.select-box
+							label.custom-select
+								select#sel
+									option(selected) 年份
+									option 年份 1
+									option 年份 2
+									option 年份 3
+								.select-text
+					li
+						.select-box
+							label.custom-select
+								select#sel
+									option(selected) 月份
+									option 月份 1
+									option 月份 2
+									option 月份 3
+								.select-text
+					li
+						.select-box
+							label.custom-select
+								select#sel
+									option(selected) 点播次数
+									option 点播次数 1
+									option 点播次数 2
+									option 点播次数 3
+								.select-text
+		.gallery-0020
+			.container.grid
+				- for (i=1; i<21; i++)
+					//-square
+					.gallery-item.col-sm-3.col-xs-6
+						figure
+							a(href="#")
+								.image(data-content="07:25")
+									img(src="img/0020/pic#{i}.jpg")
+							figcaption
+								a(href="#")
+									h5 视频标题名称
+								span 一句话简介：开发、技术咨询、技术培训、服务等相关业务和产品销售。
+					//-end square
+				.page.align-right.pull-right
+					ul
+						li: a(href="#") 首页
+						li: a(href="#") 上一页
+						li.active: a(href="#") 1
+						- for (i=2; i<5; i++)
+							li: a(href="#") #{i}
+						li: a(href="#") 下一页
+						li: a(href="#") 末页
+						li
+							.gopage
+								form#gopage                
+									input.ipt-go(type="text")
+									input.btn-go(type="submit" value="GO")
+		include inc/footer.jade
+		script.
+			$(".custom-select select").change(function() {
+				var t = $(this).find(":selected").text();
+				$(this).next(".select-text").text(t)
+			}).trigger("change");

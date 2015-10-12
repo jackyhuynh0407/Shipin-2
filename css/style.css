@@ -4309,6 +4309,17 @@ img {
   padding: 8px 15px;
 }
 
+input[type="radio"], input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background: none;
+  border-radius: 0px;
+}
+
+.width-100 {
+  width: 100%;
+}
+
 button.btn-blue {
   width: 100%;
   border: none;
@@ -4432,7 +4443,7 @@ section .box-content .box-info-content a.icon-content {
   background: white;
   border-radius: 50%;
   border: 1px solid #c5c5c5;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 section .box-content .box-info-content a.icon-content span {
   width: 125px;
@@ -4523,6 +4534,7 @@ section .box-content .deal input#check-deal {
 }
 section .box-content .deal span {
   margin-left: 8px;
+  padding-top: 4px;
   float: left;
 }
 section .box-content .deal span b {
@@ -4724,6 +4736,18 @@ section .box-content .deal span b {
 #content-190 #box-upload-image .a-upload span b {
   font-size: 34px;
   display: block;
+}
+#content-190 .image-left {
+  width: 25%;
+  height: 144px;
+  float: left;
+}
+#content-190 .box-right {
+  width: 55%;
+  float: right;
+}
+#content-190 .box-right .form-group {
+  margin-bottom: 19px;
 }
 
 #content-210 {
