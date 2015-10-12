@@ -3325,3 +3325,10 @@ img {
           top: 12px;
           right: 12px;
           z-index: 0; }
+
+.gallery-0020 .grid {
+  text-align: center; }
+  .gallery-0020 .grid .gallery-item figure img {
+    width: 100%; }
+  .gallery-0020 .grid .gallery-item figure figcaption span {
+    text-align: left; }
