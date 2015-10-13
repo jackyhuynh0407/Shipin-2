@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>百度-PC站网站建设指南</title>
     <link href="css/style.css" rel="stylesheet">
-    <!--script(src="js/fontsmoothie.min.js")--><!--[if lt IE 9]>
-    <script src="js/libs/html5shiv.min.js"></script>
-    <script src="js/libs/respond.min.js"></script><![endif]-->
+    <!--script(src="js/fontsmoothie.min.js")-->
   </head>
   <body>
     <header>
@@ -24,12 +22,14 @@
       <div id="banner"><a href="#" target="_blank" title="home-page"><img src="img/logo.png" alt="logo-website" class="logo-banner"></a></div>
     </header>
     <section>
-      <div class="container">
-        <h1 id="greeting">上传视频</h1>
-        <div class="box-content">
-          <div id="content-210">
-            <div id="player-website"><img src="img/image-player.png" alt="player"></div>
-            <button type="submit" class="btn-blue"><span>选择上传文件</span></button>
+      <div class="content-website">
+        <div class="container">
+          <h1 class="greeting">上传视频</h1>
+          <div class="box-content">
+            <div id="content-210">
+              <div id="player-website"><img src="img/image-player.png" alt="player"></div>
+              <button type="submit" class="btn-blue"><span>选择上传文件</span></button>
+            </div>
           </div>
         </div>
       </div>
@@ -39,9 +39,18 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box-contact">
             <p class="title-contact">联系我们/Contact Us</p>
-            <p><label>北京超越无限信息技术有限公司</label>电话:  （86）10 0000 0000</p>
-            <p><label>中国北京市朝阳区建国路93号万达广场</label>传真:  （86）10 0000 0000</p>
-            <p><label>电子邮件：00000@00000.com.cn</label>技术支持：00000@00000.com.cn</p>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">北京超越无限信息技术有限公司</div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">电话:  （86）10 0000 0000</div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">中国北京市朝阳区建国路93号万达广场</div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">传真:  （86）10 0000 0000</div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">电子邮件：00000@00000.com.cn</div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">技术支持：00000@00000.com.cn</div>
+            </div>
           </div>
           <div id="form-contact" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box-contact">
             <p class="title-contact">给我们留言/Leave us a message</p>
@@ -60,6 +69,7 @@
                   <textarea row="4" col="50" class="form-control textarea-contact"></textarea>
                 </div>
               </div>
+              <button type="submit" class="btn-contact">提交</button>
             </form>
           </div>
         </div>

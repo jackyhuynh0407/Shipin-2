@@ -4,39 +4,34 @@ html
   body
     include inc/header2.jade
     section
-      .container
-        h1#greeting 增加新阶段`
-        .box-content
-          #content-90
-            .col-lg-4.col-md-4.col-sm-4.col-xs-12
-              #box-upload
-                #image-upload
-                  img(src="img/no-avatar.png",alt="avatar upload")
-                button.btn-blue(type="submit") 点击修改本人头像
-                p 建议您上传500*500像素以上的 正方形头像，大小不超过2MB
-            .col-lg-8.col-md-8.col-sm-8.col-xs-12
-                form(action="",method="get")
-                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
-                    .form-group
-                      input.form-control(type="text",placeholder="姓名：")
-                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
-                    .form-group
-                      input.form-control(type="text",placeholder="职位：")
-                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
-                    .form-group
-                      input.form-control(type="text",placeholder="公司：")
-                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
-                    .form-group
-                      input.form-control(type="text",placeholder="个人网站：")
-                  .col-lg-12
-                      textarea.form-control(rows="5") 自我介绍：简单介绍您的教育背景、工作或创业经历，以及取得过的成就等
+      .content-website
+        .container
+          h1.greeting 增加新阶段`
+          .box-content.box-content-form#content-90
+              .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                .box-upload
+                  .upload
+                    input(type="file",name="upload",class="upload-prefix-na")
+                    img(src="img/no-avatar.png")
+                    button.btn-blue(type="submit") 点击修改本人头像
+                   p 建议您上传500*500像素以上的 正方形头像，大小不超过2MB
+              .col-lg-8.col-md-8.col-sm-8.col-xs-12
+                  form(action="",method="get")
+                    .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                      .form-group
+                        input.form-control(type="text",placeholder="姓名：")
+                    .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                      .form-group
+                        input.form-control(type="text",placeholder="职位：")
+                    .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                      .form-group
+                        input.form-control(type="text",placeholder="公司：")
+                    .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                      .form-group
+                        input.form-control(type="text",placeholder="个人网站：")
+                    .col-lg-12
+                        textarea.form-control(rows="5") 自我介绍：简单介绍您的教育背景、工作或创业经历，以及取得过的成就等
 
-        .box-content
-          .deal.deal2
-            .form-group
-              input(type="checkbox") 
-              span 我承诺以上登记的所有信息都是绝对真实的，并对因虚假信息产生的一切后果负全责。
-              button.btn-blue(type="submit") 保存项目信息
-
+            include inc/box-deal.jade
     include inc/contact.jade
     include inc/footer.jade

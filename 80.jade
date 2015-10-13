@@ -4,17 +4,17 @@ html
   body
     include inc/header2.jade
     section
-      .container
-        h1#greeting 增加新阶段`
-        .box-content
-          #content-80
+      .content-website
+        .container
+          h1.greeting 增加新阶段`
+          .box-content.box-content-form#content-80
             .col-lg-4.col-md-4.col-sm-4.col-xs-12
-              #box-upload
-                #image-upload
+              .box-upload
+                .upload
+                  input(type="file",name="upload", class="upload-prefix-na")
                   span Logo
-                button.btn-blue(type="submit") 点击上传
-                b 项目标志
-                p 产品logo而非公司logo，比如手 机APP的图标。像素在512*512px 以上的正方形标志。支持JPG、 GIF、PNG
+                  button.btn-blue(type="submit") 点击上传
+              
             .col-lg-8.col-md-8.col-sm-8.col-xs-12
               form(action="#",method="post")
                 .form-group
@@ -29,12 +29,6 @@ html
                 .form-group
                   label 所属阶段：
                   select.form-control
-        .box-content
-          .deal
-            .form-group
-              input(type="checkbox") 
-              span 我承诺以上登记的所有信息都是绝对真实的，并对因虚假信息产生的一切后果负全责。
-              button.btn-blue(type="submit") 保存项目信息
-
+          include inc/box-deal.jade
     include inc/contact.jade
     include inc/footer.jade
