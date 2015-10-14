@@ -4318,7 +4318,7 @@ button.btn-blue {
   padding: 8px 0px;
   background: #3385ff;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   transition: background 250ms;
 }
 button.btn-blue:hover {
@@ -4384,8 +4384,7 @@ a, a:hover {
 }
 .content-website .greeting {
   text-align: center;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 .content-website #btn-content {
@@ -4521,8 +4520,21 @@ a, a:hover {
   border: none;
   transition: background 250ms;
 }
+@media(max-width:491px) {
+  .content-website .box-content .hcode .getCode-prefix-na .btn {
+    font-size: 14px;
+  }
+}
+@media(max-width:390px) {
+  .content-website .box-content .hcode .getCode-prefix-na .btn {
+    font-size: 12px;
+  }
+}
 .content-website .box-content .hcode .getCode-prefix-na .btn:hover {
   background: #06830f;
+}
+.content-website .box-content .btn {
+  padding: 0px;
 }
 
 .box-content-form {
@@ -4579,6 +4591,31 @@ a, a:hover {
   }
 }
 
+#content-60 {
+  width: 355px;
+  margin: auto;
+}
+#content-60 form input[type="text"] {
+  width: 92%;
+  float: left;
+  margin-right: 3%;
+}
+#content-60 form input#input-getcode {
+  width: 58%;
+  margin-right: 3%;
+}
+#content-60 form .getCode-prefix-na {
+  width: 31%;
+  margin-right: 8%;
+}
+#content-60 form span.error-form {
+  color: #e10501;
+  font-size: 20px;
+  margin-top: 5px;
+  width: 5%;
+  float: left;
+}
+
 .box-info-content-70 {
   width: 280px;
   margin: auto;
@@ -4587,10 +4624,11 @@ a, a:hover {
   text-align: left;
 }
 
-#content-90 #image-upload {
-  height: 131px !important;
+#content-80 .box-upload .upload .upload-prefix-na {
+  height: 168px;
 }
-#content-90 form .col-lg-6, #content-90 form .col-lg-12 {
+
+#content-90 form .box-medium, #content-90 form .box-large {
   padding-right: 15px;
 }
 #content-90 form .form-group {
@@ -4635,7 +4673,6 @@ a, a:hover {
 }
 #content-100 .deal span {
   font-size: 13px;
-  float: left;
 }
 @media (max-width: 991px) {
   #content-100 .deal span {
@@ -4652,9 +4689,6 @@ a, a:hover {
   width: 80%;
   overflow: hidden;
   margin: auto;
-}
-#content-110 .form-110 .deal span {
-  float: left;
 }
 #content-110 .form-110 .deal ul {
   float: right;
@@ -4690,26 +4724,112 @@ a, a:hover {
   width: 70%;
 }
 
+#content-160-170 {
+  padding: 0px 40px;
+  margin-top: 0px;
+}
+#content-160-170 .box-info-content {
+  margin: 0px;
+  padding: 40px;
+}
+#content-160-170 .box-info-content:last-child {
+  background: url(../img/border-content.png) top left repeat-y;
+  border: none;
+}
+@media(max-width: 991px) {
+  #content-160-170 .box-info-content:last-child {
+    background: none;
+    padding: 15px 15px 30px 15px;
+  }
+}
+#content-160-170 .box-info-content form {
+  width: 320px;
+  float: left;
+}
+@media(max-width: 991px) {
+  #content-160-170 .box-info-content form {
+    float: none;
+    margin: auto;
+  }
+}
+#content-160-170 .box-info-content form .form-group {
+  margin-bottom: 20px;
+}
+#content-160-170 ul.box-link-content {
+  width: 190px;
+  float: right;
+}
+@media(max-width: 991px) {
+  #content-160-170 ul.box-link-content {
+    float: none;
+    margin: auto;
+  }
+}
+#content-160-170 ul.box-link-content li {
+  font-size: 20px;
+  border: 1px solid #cccccc;
+}
+#content-160-170 ul.box-link-content li:last-child {
+  border-top: 0px;
+}
+#content-160-170 ul.box-link-content li a {
+  display: block;
+  color: #3385ff;
+  line-height: 65px;
+  transition: all 200ms;
+}
+#content-160-170 ul.box-link-content li a:hover {
+  background: #3385ff;
+  color: white;
+}
+
 #content-190 #box-upload-image {
   float: left;
   padding-left: 20%;
   margin-bottom: 15px;
 }
+@media(max-width:602px) {
+  #content-190 #box-upload-image {
+    padding-left: 25%;
+  }
+}
 #content-190 #box-upload-image .resize {
   margin-right: 10px;
+  margin-bottom: 10px;
   position: relative;
   vertical-align: middle;
+  display: inline-block;
+}
+@media(max-width:602px) {
+  #content-190 #box-upload-image .resize {
+    float: left;
+  }
 }
 #content-190 .image-left {
   width: 25%;
-  height: 144px;
   float: left;
 }
-#content-190 .box-right {
-  width: 55%;
-  float: right;
+@media(max-width:991px) {
+  #content-190 .image-left {
+    width: 43%;
+  }
 }
-#content-190 .box-right .form-group {
+@media(max-width:767px) {
+  #content-190 .image-left {
+    width: 25%;
+  }
+}
+#content-190 .box-form-prefix-na {
+  width: 55%;
+  float: left;
+}
+@media(max-width:991px) {
+  #content-190 .box-form-prefix-na {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+#content-190 .box-form-prefix-na .form-group {
   margin-bottom: 19px;
 }
 #content-190 .textarea-fix {
@@ -4717,14 +4837,38 @@ a, a:hover {
   float: left;
   margin-right: 3%;
 }
+@media(max-width:576px) {
+  #content-190 .textarea-fix {
+    width: 75%;
+    margin-right: 0px;
+  }
+}
 #content-190 .a-upload-fix {
   width: 20%;
   float: left;
 }
+@media(max-width:576px) {
+  #content-190 .a-upload-fix {
+    width: 75%;
+    float: initial;
+    margin-left: 25%;
+    margin-top: 10px;
+    padding: 5px 0px !important;
+  }
+}
 #content-190 .a-upload-fix span b {
   margin: 3px 5px;
 }
-
+@media(max-width:991px) {
+  #content-190 .a-upload-fix span b {
+    margin: -8px 5px !important;
+  }
+}
+@media(min-width:698px) and (max-width:768px) {
+  #content-190 .a-upload-fix span b {
+    margin: 3px 5px !important;
+  }
+}
 .a-upload {
   display: inline-block;
   border: 1px solid #cccccc;
@@ -4790,31 +4934,31 @@ a, a:hover {
     padding: 15px;
   }
 }
-#contact-website #form-contact textarea {
-  float: left;
-  width: 86%;
+#contact-website #form-contact .form-group {
+  margin-bottom: 10px;
 }
-@media (max-width: 1200px) {
-  #contact-website #form-contact textarea {
-    width: 97%;
+#contact-website #form-contact .form-group label {
+  width: 30%;
+  float: left;
+}
+@media(max-width: 768px) {
+  #contact-website #form-contact .form-group label {
+    width: 14%;
   }
 }
-#contact-website #form-contact label {
-  width: 70px;
-  float: left;
-  line-height: 30px;
+#contact-website #form-contact .form-group input {
+  width: 70%;
 }
-#contact-website #form-contact .col-lg-6 {
-  margin-bottom: 15px;
-}
-#contact-website #form-contact .col-lg-6 input {
-  width: 171px;
-  float: left;
-}
-@media (max-width: 991px) {
-  #contact-website #form-contact .col-lg-6 input {
+@media(max-width: 768px) {
+  #contact-website #form-contact .form-group input {
     width: 86%;
   }
+}
+#contact-website #form-contact .group-textarea label {
+  width: 14%;
+}
+#contact-website #form-contact .group-textarea textarea {
+  width: 86%;
 }
 #contact-website #form-contact .btn-contact {
   float: right;
@@ -4858,6 +5002,7 @@ a, a:hover {
 .box-upload .upload input {
   width: 187px;
   height: 210px;
+  cursor: pointer;
 }
 
 .box-upload-100 input.upload-prefix-na {
@@ -4882,7 +5027,7 @@ input.upload-prefix-na {
   height: 15px;
   cursor: pointer;
   position: absolute;
-  top: 3px;
+  top: 4px;
   background: white;
   border: 1px solid #666666;
   border-radius: 4px;
@@ -4892,9 +5037,9 @@ input.upload-prefix-na {
   width: 9px;
   height: 5px;
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: 2px;
-  border: 2px solid red;
+  border: 1px solid red;
   border-top: none;
   border-right: none;
   background: transparent;
@@ -4903,15 +5048,36 @@ input.upload-prefix-na {
 }
 .squaredThree input[type=checkbox] {
   visibility: hidden;
+  margin-left: -17px;
 }
 .squaredThree input[type=checkbox]:checked + label:after {
   opacity: 1;
 }
 .squaredThree span {
-  margin-left: 18px;
+  margin-left: 25px;
 }
 .squaredThree button.btn-blue {
   display: block;
   width: 40%;
   margin: 15px auto 0px auto;
+}
+
+.styled-select select.form-control {
+  background: transparent;
+  width: 100% !important;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+}
+
+.styled-select {
+  width: 80%;
+  height: 33px;
+  overflow: hidden;
+  background: url(../img/arrow-down.png) no-repeat top 13px right 10px white;
+  border: 1px solid #cccccc;
 }

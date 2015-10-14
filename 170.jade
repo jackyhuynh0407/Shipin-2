@@ -1,0 +1,29 @@
+doctype html
+html
+  include inc/head.jade
+  body
+    include inc/header2.jade
+    section
+      .content-website
+        .container
+          h1.greeting
+          .box-content#content-160-170
+            .row
+              .col-lg-6.col-md-6.col-sm-12.col-xs-12.box-info-content
+                ul.box-link-content
+                  li
+                    a(href="#",title="基本信息") 基本信息
+                  li
+                    a(href="#",title="账号安全") 账号安全
+              .col-lg-6.col-md-6.col-sm-12.col-xs-12.box-info-content
+                form(action="#",method="post")
+                  .form-group
+                    input.form-control(type="text",placeholder="旧密码",name="old_password",id="old_password")
+                  .form-group
+                    input.form-control(type="text",placeholder="新密码",name="new_pass",id="new_pass")
+                  .form-group
+                    input.form-control(type="text",placeholder="确认密码",name="confirm_password",id="confirm_password")
+                  button.btn-blue(type="submit") 修改密码
+                  
+    include inc/contact.jade
+    include inc/footer.jade

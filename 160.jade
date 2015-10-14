@@ -1,0 +1,33 @@
+doctype html
+html
+  include inc/head.jade
+  body
+    include inc/header2.jade
+    section
+      .content-website
+        .container
+          h1.greeting
+          .box-content#content-160-170
+            .row
+              .col-lg-6.col-md-6.col-sm-12.col-xs-12.box-info-content
+                ul.box-link-content
+                  li
+                    a(href="#",title="基本信息") 基本信息
+                  li
+                    a(href="#",title="账号安全") 账号安全
+              .col-lg-6.col-md-6.col-sm-12.col-xs-12.box-info-content
+                form(action="#",method="post")
+                  .form-group
+                    input.form-control(type="text",placeholder="超越无限",name="uname",id="uname")
+                  .form-group
+                    input.form-control(type="text",placeholder="chaoyuewuxian@163.comEmail",name="email",id="email")
+                  .form-group
+                    input.form-control(type="text",placeholder="13718698765")
+                  .form-group.hcode
+                    input.form-control#input-getcode(type="text",placeholder="验证码")
+                    .getcode.getCode-prefix-na
+                          button#getCode.btn(type="button") 获取验证码
+                  button.btn-blue(type="submit") 保存
+                  
+    include inc/contact.jade
+    include inc/footer.jade

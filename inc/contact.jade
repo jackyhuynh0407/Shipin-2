@@ -22,13 +22,16 @@
         p.title-contact 给我们留言/Leave us a message
         form(action="#",method="post")
           .row
-            .col-lg-6.col-md-6.col-sm-12.col-xs-12
+            .col-sm-6.col-xs-12
+              .form-group
                 label 姓       名：
                 input.form-control(type='text')
-            .col-lg-6.col-md-6.col-sm-12.col-xs-12
-              label 联系方式：
-              input.form-control(type='text')
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12
-              label 留言内容：
-              textarea.form-control.textarea-contact(row="4", col="50")
+            .col-sm-6.col-xs-12
+              .form-group
+                label 联系方式：
+                input.form-control(type='text')
+            .col-xs-12
+              .form-group.group-textarea
+                label 留言内容：
+                textarea.form-control.textarea-contact(row="4", col="50")
           button.btn-contact(type="submit") 提交

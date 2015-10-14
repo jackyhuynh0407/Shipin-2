@@ -6,7 +6,8 @@ html
     section
       .content-website
         .container
-          h1.greeting Welcome to span 超越无限
+          h1.greeting
+            b 会员登录
           .box-content
             #content-110
               span Or
@@ -21,8 +22,9 @@ html
                         input.form-control(type="text",placeholder="手机号\Email")
                       .form-group
                         input.form-control(type="text",placeholder="密码")
-                      .form-group.deal
-                        input#check-deal(type="checkbox",name="check-deal")
+                      .form-group.deal.squaredThree
+                        input(type="checkbox",value="None",id="squaredThree",name="check")
+                        label(for="squaredThree")
                         <span>下次自动登录</span>
                         ul
                           li

@@ -6,7 +6,8 @@ html
     section
         .content-website
           .container
-            h1.greeting 投资人认证
+            h1.greeting 
+              b 投资人认证
             .box-content
               #content-100
                 span.title-box-content 请上传身份证和名片，帮助我们快速核实您的身份（两种证件必须同时上传）
@@ -20,8 +21,9 @@ html
                     input.form-control(type="text",placeholder="点击上传名片扫描件或高清拍照")
                     span.input-group-addon#basic-addon1 +
                   p.error-form-prefix-na 上传图片格式仅限JPG、PNG，大小限制为300KB
-                  .form-group.deal
-                    input#check-deal(type="checkbox",name="check-deal")
+                  .form-group.deal.squaredThree
+                    input(type="checkbox",value="None",id="squaredThree",name="check")
+                    label(for="squaredThree")
                     <span>我承诺以上登记的所有信息都是绝对真实的，并对因虚假信息产生的一切后果负全责。</span>
                   button.btn-blue(type="submit") <span>提交认证</span>
     include inc/contact.jade

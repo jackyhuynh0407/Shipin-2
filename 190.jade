@@ -6,7 +6,8 @@ html
     section
       .content-website
         .container
-          h1.greeting 增加新阶段`
+          h1.greeting
+            b 增加新阶段
           .box-content
             .box-content-form#content-190
               form(action="",method="post", enctype='multipart/form-data')
@@ -30,7 +31,8 @@ html
                     input.form-control(type="text",placeholder="“最多可选择5个领域”")
                   .form-group
                     label 所属阶段：
-                    select.form-control
+                    .styled-select
+                      select.form-control
                   .form-group
                     label 项目介绍：
                     textarea.form-control(rows="5")
@@ -43,7 +45,7 @@ html
                     label 团队介绍：
                     .image-left
                       img(src="img/image-content-190.png", alt="image-content-190")
-                    .box-right
+                    .box-form-prefix-na
                       .form-group
                         label 姓名：
                         input.form-control(type="text")

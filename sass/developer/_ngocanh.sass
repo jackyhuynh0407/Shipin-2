@@ -7,7 +7,7 @@ button.btn-blue
   padding: 8px 0px
   background: $blue
   color: #FFF
-  font-size: 16px
+  font-size: 20px
   transition: background 250ms
   &:hover
     background: #326ec7
@@ -54,8 +54,7 @@ a,a:hover
   padding: 40px 0px
   .greeting
     text-align: center
-    font-size: 18px
-    font-weight: bold
+    font-size: 20px
     margin-bottom: 30px
   #btn-content
     display: inline-block
@@ -164,9 +163,14 @@ a,a:hover
       line-height: 0px
       border: none
       transition: background 250ms
+      @media(max-width:491px)
+        font-size: 14px
+      @media(max-width:390px)
+        font-size: 12px
       &:hover
         background: #06830f
-    
+    .btn
+      padding: 0px
 
 .box-content-form
   overflow: hidden
@@ -199,17 +203,40 @@ a,a:hover
         @media (max-width:444px)
           width: 70%
 
+#content-60
+  width: 355px
+  margin: auto
+  form
+    input[type="text"]
+      width: 92%
+      float: left
+      margin-right: 3%
+    input#input-getcode
+      width: 58%
+      margin-right: 3%
+    .getCode-prefix-na
+      width: 31%
+      margin-right: 8%
+    span.error-form
+      color: $red
+      font-size: 20px
+      margin-top: 5px
+      width: 5%
+      float: left
+
 .box-info-content-70
   width: 280px
   margin: auto
   p
     text-align: left
 
+#content-80
+  .box-upload .upload .upload-prefix-na
+    height: 168px
+
 #content-90
-  #image-upload
-    height: 131px !important
   form
-    .col-lg-6, .col-lg-12
+    .box-medium, .box-large
       padding-right: 15px
     .form-group
       width: 100%
@@ -242,7 +269,6 @@ a,a:hover
     color: $red
   .deal span
     font-size: 13px
-    float: left
     @media (max-width:991px)
       margin-left: 7px
     @media (max-width:642px)
@@ -254,8 +280,6 @@ a,a:hover
     overflow: hidden
     margin: auto
     .deal
-      span
-        float: left
       ul
         float: right
         li
@@ -280,33 +304,98 @@ a,a:hover
     width: 70%
 
 
+#content-160-170
+  padding: 0px 40px
+  margin-top: 0px
+  .box-info-content
+    margin: 0px
+    padding: 40px
+    &:last-child
+      background: url(../img/border-content.png) top left repeat-y
+      border: none
+      @media(max-width: 991px)
+        background: none
+        padding: 15px 15px 30px 15px
+    form
+      width: 320px
+      float: left
+      @media(max-width: 991px)
+        float: none
+        margin: auto
+      .form-group
+        margin-bottom: 20px
+  ul.box-link-content
+    width: 190px
+    float: right
+    @media(max-width: 991px)
+      float: none
+      margin: auto
+    li
+      font-size: 20px
+      border: 1px solid #CCC
+      &:last-child
+        border-top: 0px
+      a
+        display: block
+        color: $blue
+        line-height: 65px
+        transition: all 200ms
+        &:hover
+          background: $blue
+          color: #FFF
+
 #content-190
   #box-upload-image
     float: left
     padding-left: 20%
     margin-bottom: 15px
+    @media(max-width:602px)
+      padding-left: 25%
     .resize
       margin-right: 10px
+      margin-bottom: 10px
       position: relative
       vertical-align: middle
+      display: inline-block
+      @media(max-width:602px)
+        float: left
   .image-left
     width: 25%
-    height: 144px
     float: left
-  .box-right
+    @media(max-width:991px)
+      width: 43%
+    @media(max-width:767px)
+      width: 25%
+  .box-form-prefix-na
     width: 55%
-    float: right
+    float: left
+    @media(max-width:991px)
+      width: 100%
+      margin-top: 15px
     .form-group
       margin-bottom: 19px
   .textarea-fix
     width: 57%
     float: left
     margin-right: 3%
+    @media(max-width:576px)
+      width: 75%
+      margin-right: 0px
   .a-upload-fix
     width: 20%
     float: left
+    @media(max-width:576px)
+      width: 75%
+      float: initial
+      margin-left: 25%
+      margin-top: 10px
+      padding: 5px 0px !important
     span b
       margin: 3px 5px
+      @media(max-width:991px)
+        margin: -8px 5px !important
+      @media(min-width:698px) and (max-width:768px)
+        margin: 3px 5px !important
 .a-upload
   display: inline-block
   border: 1px solid #CCC
@@ -356,22 +445,22 @@ a,a:hover
     @media (max-width:991px)
       border-left: none
       padding: 15px
-    textarea
-      float: left
-      width: 86%
-      @media (max-width:1200px)
-        width: 97%
-    label
-      width: 70px
-      float: left
-      line-height: 30px
-    .col-lg-6
-      margin-bottom: 15px
-      input
-        width: 171px
+    .form-group
+      margin-bottom: 10px
+      label
+        width: 30%
         float: left
-        @media (max-width:991px)
+        @media(max-width: 768px)
+          width: 14%
+      input
+        width: 70%
+        @media(max-width: 768px)
           width: 86%
+    .group-textarea
+      label
+        width: 14%
+      textarea
+        width: 86%
     .btn-contact
       float: right
       background: #eee
@@ -406,6 +495,7 @@ a,a:hover
     input
       width: 187px
       height: 210px
+      cursor: pointer
 
 .box-upload-100 input.upload-prefix-na
   width: 40px
@@ -428,7 +518,7 @@ input.upload-prefix-na
     height: 15px
     cursor: pointer
     position: absolute
-    top: 3px
+    top: 4px
     background: #FFF
     border: 1px solid #666
     border-radius: 4px
@@ -437,9 +527,9 @@ input.upload-prefix-na
       width: 9px
       height: 5px
       position: absolute
-      top: 2px
+      top: 3px
       left: 2px
-      border: 2px solid #F00
+      border: 1px solid #F00
       border-top: none
       border-right: none
       background: transparent
@@ -447,11 +537,31 @@ input.upload-prefix-na
       transform: rotate(-45deg)
   input[type=checkbox]
     visibility: hidden
+    margin-left: -17px
     &:checked + label:after
       opacity: 1
   span
-    margin-left: 18px
+    margin-left: 25px
   button.btn-blue
     display: block
     width: 40%
     margin: 15px auto 0px auto
+
+
+.styled-select select.form-control
+  background: transparent
+  width: 100% !important
+  padding: 5px
+  font-size: 16px
+  line-height: 1
+  border: 0
+  border-radius: 0
+  height: 34px
+  -webkit-appearance: none
+
+.styled-select
+  width: 80%
+  height: 33px
+  overflow: hidden
+  background: url(../img/arrow-down.png) no-repeat top 13px right 10px #FFF
+  border: 1px solid #ccc
